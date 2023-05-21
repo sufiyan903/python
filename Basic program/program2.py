@@ -1,0 +1,6 @@
+r=int(input("enter the radius of cylinder:"))
+h=int(input("enter the height of the cylinder:"))
+a=((2*3.14*r)*h)+((2*3.14*r*r))
+v=(1/3*((3.14*r*r)*h))
+print("area:{}".format(a))
+print("volume:{}".format(v))
