@@ -1,12 +1,16 @@
-def factorial(n):
-    if n == 0 or n == 1:
-        return 1
-    else:
-        return n * factorial(n - 1)
+# Read the list of 5 numbers from the user
+numbers = []
+for i in range(5):
+    num = int(input(f"Enter number {i+1}: "))
+    numbers.append(num)
 
-numbers = [int(x) for x in input("Enter the list of numbers: ").split()]
+# Calculate the factorial of each number and store them in a new list
+factorials = []
+for num in numbers:
+    factorial = 1
+    for i in range(1, num + 1):
+        factorial *= i
+    factorials.append(factorial)
 
-factorial_list = [factorial(num) for num in numbers]
-
-print("Original list:", numbers)
-print("Factorial list:", factorial_list)
+# Print the resulting list of factorials
+print("Factorials:",factorials)
